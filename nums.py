@@ -4,5 +4,9 @@
 from os import *
 
 def main():
-    dirList = os.listdir()
-numList
+    x = "numsText.txt"
+    f = open(x, "r")
+    A = f.readlines()
+    f.close()
+    print A
+main()
