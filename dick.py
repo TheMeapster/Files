@@ -26,11 +26,10 @@ def main():
     for i in A:
         if i[0] == 'f':
             startF.append(i)
+    print startF
     print "The number of words that start with F is:", len(startF)
     palindromes = []
     for i in fives:
-        print i
-        print i[::-1]
         if i == i[::-1]:
             palindromes.append(i)
 
