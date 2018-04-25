@@ -30,6 +30,7 @@ def edit():
 def view():
     name = raw_input("What is the name of the haiku you want to read: ") + ".txt"
     print open(name, "r").read()
+
 def main():
     valid = True
     while valid:
@@ -44,6 +45,5 @@ def main():
             for i in files:
                 os.remove(i)
             valid = False
-
 
 main()
