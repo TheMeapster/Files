@@ -5,33 +5,36 @@
 import os
 from random import randint
 
-def check(lis, num, player):
-    for j in range(4,9):
-        if num > j-4:
-            print "Congratulations! Your score was high enough to get on the leaderboard."
-            return str(num) + " " + player + "\n"
-        else:
-            print "You didn't get on the leaderboard."
-
 def main():
-    originals = [476, 92, 984, 5, 758, 320, 592, 603, 247, 818]
     A = open("high.txt", "r").read()
-    lines = open("high.txt", "r").readlines()
     print "There is already a list of 5 highscores. Your score will be randomly generated and if it is high enough to be on the list it will be added."
-    print "The highscores are \n", A
+    print "The highscores are: \n", A
     A = A.split()
+    B = open("high.txt", "r").readlines()
     for i in A:
         if i.isdigit():
             i = int(i)
         else:
             A.remove(i)
+    count = 0
+    for i in A:
+        A[count] = int(i)
+        count += 1
     name = raw_input("Enter your name (no spaces): ")
-    score = randint(600,1000)
-    lines[j-4] = check(lines, score, name)
+    score = 997
+    index = 0
+    valid = True
+    for j in range(6):
+        if valid:
+            if score > A[index]:
+                B.pop(4)
+                B.insert(index, str(score) + " " + name + "\n")
+                print B
+                valid = False
+            else:
+                index += 1
     f = open("high.txt", "w")
-    f.write("")
-    f = open("high.txt", "a")
-    for i in lines:
-        f.write(str(i) + " " + name + "\n")
+    for i in B:
+        f.write(str(i))
     print "The new highscores are" + open("high.txt", "r").read()
 main()

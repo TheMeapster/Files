@@ -32,8 +32,8 @@ def edit(filez):
     valid = True
     while valid:
         name = raw_input("What is the name of the haiku you want to edit: ") + ".txt"
-        line = input("What number is the line: ")
         if name in filez:
+            line = input("What number is the line: ")
             A = open("./txt/" + name,"r").readlines()
             A[line-1] = raw_input("Enter the new line: ") + "\n"
             f = open("./txt/" + name,"w+")
