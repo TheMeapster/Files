@@ -23,7 +23,7 @@ def main():
         A[count] = int(i)
         count += 1
     name = raw_input("Enter your name (no spaces): ")
-    score = 750
+    score = randint(1,1000)
     os.system("clear")
     print score
     index = 0
