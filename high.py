@@ -13,7 +13,6 @@ def main():
     print "The highscores are: \n", A
     A = A.split()
     B = open("high.txt", "r").readlines()
-    print "B", B
     for i in A:
         if i.isdigit():
             i = int(i)
@@ -24,25 +23,23 @@ def main():
         A[count] = int(i)
         count += 1
     name = raw_input("Enter your name (no spaces): ")
-    score = randint(1,1000)
+    score = 750
     os.system("clear")
     print score
     index = 0
     valid = True
-    for j in range(11):
+    for j in range(10):
         if valid:
-            print A[index], score
             if score > A[index]:
                 B.pop(9)
-                print A[index], score
-                B.insert(index, str(score) + "\t" + name + "\n")
+                B.insert(index, str(score) + " " + name + "\n")
                 print "Your score of", score, "placed number", j + 1, "on the table. \n"
                 valid = False
-            elif j == 10:
+            elif j == 9:
                 print "Your score of", score, "was not high enough to get on the table. \n"
+                valid == False
             else:
                 index += 1
-
     f = open("high.txt", "w")
     for i in B:
         f.write(str(i))
