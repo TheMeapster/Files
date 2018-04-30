@@ -22,17 +22,21 @@ def main():
     for i in A:
         A[count] = int(i)
         count += 1
-    name = raw_input("Enter your name (no spaces): ")
-    score = randint(1,1000)
+    name = raw_input("Enter your name (spaces will be changed to underscores): ")
+    finalName = ""
+    for i in name:
+        if i == " ":
+            i = "_"
+        finalName += i
+    score = 895
     os.system("clear")
-    print score
     index = 0
     valid = True
     for j in range(10):
         if valid:
-            if score > A[index]:
+            if score >= A[index]:
                 B.pop(9)
-                B.insert(index, str(score) + " " + name + "\n")
+                B.insert(index, str(score) + " " + finalName + "\n")
                 print "Your score of", score, "placed number", j + 1, "on the table. \n"
                 valid = False
             elif j == 9:

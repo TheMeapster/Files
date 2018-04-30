@@ -320,7 +320,7 @@ finger
 flock
 frame
 furniture
-geese
+goose
 ghost
 giraffe
 governor
