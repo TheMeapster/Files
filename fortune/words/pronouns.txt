@@ -1,0 +1,22 @@
+mother
+mom
+father
+dad
+parent
+children
+son
+daughter
+sister
+brother
+grandmother
+grandfather
+grandparent
+grandson
+granddaughter
+grandchild
+aunt
+uncle
+niece
+nephew
+cousin
+significant other
