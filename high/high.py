@@ -28,7 +28,7 @@ def main():
         if i == " ":
             i = "_"
         finalName += i
-    score = 895
+    score = randint(1,1000)
     os.system("clear")
     index = 0
     valid = True
