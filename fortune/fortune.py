@@ -1,3 +1,4 @@
+# Dylan and Avi
 # Fortune Cookie Generator
 # Copyright 2018, Dylan Marchlinski and Avinesh Sriram
 
@@ -17,7 +18,7 @@ def fortune():
     adverb = choice(filearr("words/adverbs.txt"))
     verb = choice(filearr("words/verbs.txt"))
     noun = choice(filearr("words/nouns.txt"))
-    vowels = ["a","e","i","o","u"]
+    vowels = ["a", "e", "i", "o", "u"]
     clause = ""
     if noun[0] in vowels:
         clause = "an"
@@ -31,6 +32,4 @@ def fortune():
 def main():
     fortune()
 
-
-if __name__ == "__main__":
-    main()
+main()
