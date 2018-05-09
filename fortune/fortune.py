@@ -12,7 +12,6 @@ def filearr(fname):
     lines = [x.strip() for x in lines]
     return lines
 
-
 def fortune():
     pronoun = choice(filearr("words/pronouns.txt"))
     adverb = choice(filearr("words/adverbs.txt"))
@@ -27,7 +26,6 @@ def fortune():
     system("clear")
     print("Your %s will %s %s %s %s." % (pronoun, adverb, verb, clause, noun))
     sleep(3)
-
 
 def main():
     fortune()
