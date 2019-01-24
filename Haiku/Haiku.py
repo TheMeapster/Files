@@ -20,7 +20,7 @@ def create(filez):
             if choice == 1:
                 valid = False
         else:
-            valid = False
+            valid = True
     filez.append(name)
     f = open("./txt/" + name,"w+")
     for i in haiku:
