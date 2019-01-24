@@ -22,7 +22,7 @@ def create(filez):
         else:
             valid = True
     filez.append(name)
-    f = open("./txt/" + name,"w+")
+    f = open("./Text/" + name,"w+")
     for i in haiku:
         f.write(i)
     return filez
@@ -54,7 +54,7 @@ def view(filez):
     while valid:
         name = raw_input("What is the name of the haiku you want to read: ") + ".txt"
         if name in filez:
-            with open("./txt/" + name) as f:
+            with open("./Text/" + name) as f:
                 content = f.readlines()
             content = [x.strip() for x in content]
             os.system("clear")
@@ -73,7 +73,7 @@ def delete(filez):
     while valid:
         name = raw_input("What is the name of the haiku you want to read: ") + ".txt"
         if name in filez:
-            os.remove("./txt/" + name)
+            os.remove("./Text/" + name)
             print name, "has been deleted."
         else:
             print "That is not a valid file name."
@@ -83,7 +83,7 @@ def main():
     os.system("clear")
     valid = True
     while valid:
-        files = os.listdir("./txt")
+        files = os.listdir("./Text")
         os.system("clear")
         choice = input("Do you want to make a haiku (1), edit a haiku (2), read a haiku (3), delete a haiku (4), or end the program (5): ")
         if choice == 1:
