@@ -10,12 +10,12 @@ from random import randint
 
 def main():
     os.system("clear")
-    A = open("high.txt", "r").read()
+    A = open("High.txt", "r").read()
     print "There is already a list of 5 highscores."
     print "Your score will be randomly generated and if it is high enough it will be added to a leaderboard. \n"
     print "The current highscores are: \n", A
     A = A.split()
-    B = open("high.txt", "r").readlines()
+    B = open("High.txt", "r").readlines()
     for i in A:
         if i.isdigit():
             i = int(i)
@@ -47,11 +47,11 @@ def main():
                 valid == False
             else:
                 index += 1
-    f = open("high.txt", "w")
+    f = open("High.txt", "w")
     for i in B:
         f.write(str(i))
     f.close()
-    C = open("high.txt", "r").read()
+    C = open("High.txt", "r").read()
     print "The new highscores are: \n", C
     time.sleep(3)
 main()
