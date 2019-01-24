@@ -13,10 +13,10 @@ def filearr(fname):
     return lines
 
 def fortune():
-    pronoun = choice(filearr("words/pronouns.txt"))
-    adverb = choice(filearr("words/adverbs.txt"))
-    verb = choice(filearr("words/verbs.txt"))
-    noun = choice(filearr("words/nouns.txt"))
+    pronoun = choice(filearr("words/Pronouns.txt"))
+    adverb = choice(filearr("words/Adverbs.txt"))
+    verb = choice(filearr("words/Verbs.txt"))
+    noun = choice(filearr("words/Nouns.txt"))
     vowels = ["a", "e", "i", "o", "u"]
     clause = ""
     if noun[0] in vowels:
